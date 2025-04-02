@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/langchain-ai/langgraph/refs/heads/main/libs/cli/schemas/schema.json",
   "dependencies": ["."],
   "graphs": {
     "agent": "./src/react_agent/graph.py:graph"
@@ -9,5 +10,12 @@
   },
   "http": {
     "app": "./src/react_agent/app.py:app"
+  },
+  "checkpointer": {
+    "ttl": {
+      "strategy": "delete",
+      "sweep_interval_minutes": 1,
+      "default_ttl": 1
+    }
   }
 }
