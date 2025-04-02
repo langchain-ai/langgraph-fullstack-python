@@ -556,7 +556,7 @@ def AssistantMessagePlaceholder(thread_id: str, run_id: str) -> Div:
         sse_connect=f"/conversations/{thread_id}/get-message?run_id={run_id}",
         sse_swap="message",
         hx_target=f"#{content_id}",
-        hx_swap="innerHTML",
+        hx_swap="beforeend",
     )
 
 
